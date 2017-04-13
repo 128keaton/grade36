@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unit_serial_number: MyString
+  unit_model: MyString
+  cpu_model: MyString
+  unit_mfr: MyString
+  ram_pass: false
+  ram_size: 1
+  hdd_pass: false
+  hdd_size: 1
+  hdd_serial: MyString
+
+two:
+  unit_serial_number: MyString
+  unit_model: MyString
+  cpu_model: MyString
+  unit_mfr: MyString
+  ram_pass: false
+  ram_size: 1
+  hdd_pass: false
+  hdd_size: 1
+  hdd_serial: MyString

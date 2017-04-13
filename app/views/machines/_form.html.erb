@@ -1,0 +1,67 @@
+<%= form_for(machine) do |f| %>
+  <% if machine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(machine.errors.count, "error") %> prohibited this machine from being saved:</h2>
+
+      <ul>
+      <% machine.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :unit_serial_number %>
+    <%= f.text_field :unit_serial_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unit_model %>
+    <%= f.text_field :unit_model %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cpu_model %>
+    <%= f.text_field :cpu_model %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unit_mfr %>
+    <%= f.text_field :unit_mfr %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ram_pass %>
+    <%= f.check_box :ram_pass %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ram_size %>
+    <%= f.number_field :ram_size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hdd_pass %>
+    <%= f.check_box :hdd_pass %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hdd_size %>
+    <%= f.number_field :hdd_size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hdd_serial %>
+    <%= f.text_field :hdd_serial %>
+  </div>
+  <div class="field">
+    <%= f.label :order_number %>
+    <%= f.text_field :order_number %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

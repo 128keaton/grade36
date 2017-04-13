@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unit serial number:</strong>
+  <%= @machine.unit_serial_number %>
+</p>
+
+<p>
+  <strong>Unit model:</strong>
+  <%= @machine.unit_model %>
+</p>
+
+<p>
+  <strong>Cpu model:</strong>
+  <%= @machine.cpu_model %>
+</p>
+
+<p>
+  <strong>Unit mfr:</strong>
+  <%= @machine.unit_mfr %>
+</p>
+
+<p>
+  <strong>Ram pass:</strong>
+  <%= @machine.ram_pass %>
+</p>
+
+<p>
+  <strong>Ram size:</strong>
+  <%= @machine.ram_size %>
+</p>
+
+<p>
+  <strong>Hdd pass:</strong>
+  <%= @machine.hdd_pass %>
+</p>
+
+<p>
+  <strong>Hdd size:</strong>
+  <%= @machine.hdd_size %>
+</p>
+
+<p>
+  <strong>Hdd serial:</strong>
+  <%= @machine.hdd_serial %>
+</p>
+<p>
+  <strong>Order number:</strong>
+  <%= @machine.order_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_machine_path(@machine) %> |
+<%= link_to 'Back', machines_path %>

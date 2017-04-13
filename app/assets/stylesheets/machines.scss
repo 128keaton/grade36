@@ -1,0 +1,125 @@
+// Place all the styles related to the Machines controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#notice {
+    position: absolute;
+}
+body{
+  background: #7B1FA2!important;
+}
+
+
+.create-new,
+input[type="submit" i] {
+    display: block;
+    margin-top: 25px;
+    font-size: 20px;
+    border: none!important;
+    color: #fff;
+    background: #FFEB3B;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+    margin-right: 25px;
+}
+#search-option input, select{
+  border: none!important;
+  padding: 5px;
+  margin-top: 12px;
+}
+
+#search-option select{
+  width: 100px;
+  height: 20px;
+}
+ #search-option span{
+   font-size: 12px;
+ }
+.create-new {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.1;
+    color: white!important;
+}
+
+input[type="submit" i]:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.header-text {
+    width: 100%;
+    height: 20px;
+    text-align: left;
+    padding: 25px;
+    background: #7B1FA2;
+    color: #fff;
+    margin: 0;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+.machine_search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: stretch;
+    margin-bottom: 25px;
+    width: 100%;
+    background: #9C27B0;
+    padding: 25px;
+    color: #fff;
+    font-size: 18px;
+}
+
+#search-option {
+    margin-left: 20px;
+}
+
+#search-option:nth-child(2) {
+    margin-left: 0;
+}
+
+.search-box-dates {
+    display: flex;
+    margin-left: 0 !important;
+    justify-content: flex-start;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.search-box-dates #search-option:nth-child(1) {
+    margin-left: 0;
+}
+
+.search-box-dates #search-option:nth-child(2) {
+    margin-left: 20px;
+}
+table{
+  width: 100%;
+  font-size: 20px;
+  border-collapse: collapse;
+  text-align: left;
+  margin-top: -30px;
+}
+thead{
+  background-color: black;
+}
+thead tr{
+  height: 70px;
+  background-color: #7B1FA2!important;
+}
+thead tr a{
+  color: #fff!important;
+  text-decoration: none;
+  font-weight: 100;
+}
+tr:nth-child(odd){
+  padding: 20px;
+  background: #E1BEE7;
+}
+tr{
+  background-color: #fff;
+  height: 50px;
+}
