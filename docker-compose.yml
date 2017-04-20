@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  postgres:
+    image: 'postgres'
+    environment:
+      POSTGRES_USER: 'grade36'
+      POSTGRES_PASSWORD: 'reviveit'
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'postgresql:/var/lib/postgresql/data'
+
+  website:
+    depends_on:
+      - 'postgres'
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/grade36'
+    env_file:
+      - '.env'
+
+volumes:
+  postgresql:
