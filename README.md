@@ -10,5 +10,9 @@ A Rails application to provide a paper trail for testing and cloning machines fo
 
 ## .env File Example:
 ```
+COMPOSE_PROJECT_NAME=grade36
+DATABASE_URL=postgresql://me:password@postgres:5432/grade36
+SECRET_TOKEN=hehehehshhhsecret
+
 
 ```
