@@ -1,5 +1,5 @@
 # grade36
-A Rails application to provide a paper trail for testing and cloning machines for a utility like [Panucci](#todo)
+A Rails application to provide a paper trail for testing and cloning machines for a utility like [Panucci](https://github.com/hschreck/Panucci/)
 
 ## Instructions
 1. Install [Docker](https://docs.docker.com/engine/installation/).
