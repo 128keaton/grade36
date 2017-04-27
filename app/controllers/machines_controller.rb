@@ -56,10 +56,10 @@ class MachinesController < ApplicationController
   # DELETE /machines/1
   # DELETE /machines/1.json
   def destroy
-    @machine.destroy
+    @machine.deleted = true
+    @machine.save
     respond_to do |format|
-      format.html { redirect_to machines_url, notice: 'Machine was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to :controller => 'machines', :action => 'index', notice: 'Machine was successfully marked as deleted.' }
     end
   end
 
