@@ -16,7 +16,7 @@ input[type="submit" i] {
     margin-top: 25px;
     font-size: 20px;
     border: none!important;
-    color: #fff;
+    color: #2f2c2c!important;
     background: #FFEB3B;
     padding: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -40,7 +40,11 @@ input[type="submit" i] {
     text-decoration: none;
     font-size: 20px;
     line-height: 1.1;
-    color: white!important;
+    color: #2f2c2c!important;
+}
+.create-new:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	background-color: #FFEB3B;
 }
 
 input[type="submit" i]:hover {
