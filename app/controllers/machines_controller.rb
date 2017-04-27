@@ -26,7 +26,7 @@ class MachinesController < ApplicationController
   # POST /machines
   # POST /machines.json
   def create
-    @machine = Machine.new(JSON.parse(machine_params))
+    @machine = Machine.new(machine_params)
 
     respond_to do |format|
       if @machine.save
