@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <h1 class="header-text">Machines</h1>
 <div class="search-box">
     <%= search_form_for @q do |f| %>
@@ -13,7 +12,7 @@
     </div>
     <div id="search-option">
         <label>HDD Size:</label>
-        <%= f.select :hdd_size_eq, options_for_select(["120", "80"]) %>
+        <%= f.select :hdd_size_eq, options_for_select(["", "80", "120"]) %>
         <span class="unit">GB</span>
     </div>
     <div id="search-option">
@@ -26,8 +25,12 @@
     </div>
     <div id="search-option">
         <label>RAM Amount:</label>
-        <%= f.number_field :ram_size, :placeholder => "4" %>
+        <%= f.number_field :ram_size_eq, :placeholder => "4" %>
         <span class="unit">GB</span>
+    </div>
+    <div id="search-option">
+        <label>Deleted:</label>
+        <input type="checkbox" name="deleted" value="true">
     </div>
     <div class="search-box-dates">
         <div id="search-option">
@@ -54,13 +57,14 @@
             <th><%= sort_link @q, :hdd_serial, "HDD Serial" %></th>
             <th><%= sort_link @q, :created_at, "Created" %></th>
             <th><%= sort_link @q, :order_number, "Order Number" %></th>
-            <th><%= sort_link @q, :order_number, "Deleted" %></th>
+            <th><%= sort_link @q, :deleted, "Deleted" %></th>
             <th colspan="2"><a class="sort_link">Actions</a></th>
         </tr>
     </thead>
 
     <tbody>
         <% @results.each do |machine| %>
+        <% if machine.deleted == true && params[:deleted] || !params[:deleted] && machine.deleted == false %>
         <tr>
             <td><%= machine.unit_serial_number %></td>
             <td><%= machine.unit_model %></td>
@@ -71,10 +75,12 @@
             <td><%= machine.hdd_serial %></td>
             <td><%= machine.created_at %></td>
             <td><% if machine.order_number == 0 %>No Order Number<% else %><%= machine.order_number %><% end %></td>
-            <td><% if machine.deleted || machine.deleted == true%>Yes<% else %>No<% end %></td>
+            <td><% if machine.deleted == true %>Yes<% else %>No<% end %></td>
             <td><%= link_to 'View', machine, :class => "table-button" %></td>
-            <td><%= link_to 'Mark Deleted', machine, method: :delete, data: { confirm: 'Are you sure?' }, :class => "table-button-delete" %></td>
+            <td><% if machine.deleted == true %><%= link_to 'Undelete', machine, method: :delete, :class => "table-button", :id => "undelete" %><% else %>
+            <%= link_to 'Mark Deleted', machine, method: :delete, data: { confirm: 'Are you sure?' }, :class => "table-button", :id => "delete" %><% end %></td>
         </tr>
+        <% end %>
         <% end %>
     </tbody>
 </table>
