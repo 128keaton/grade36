@@ -64,7 +64,7 @@
 
     <tbody>
         <% @results.each do |machine| %>
-        <% if machine.deleted == true && params[:deleted] || !params[:deleted] && machine.deleted == false %>
+        <% if machine.deleted == true && params[:deleted] || !params[:deleted] && machine.deleted == false || !params[:deleted && !machine.deleted %>
         <tr>
             <td><%= machine.unit_serial_number %></td>
             <td><%= machine.unit_model %></td>
