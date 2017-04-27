@@ -5,10 +5,10 @@
 #notice {
     position: absolute;
 }
-body{
-  background: #7B1FA2!important;
-}
 
+body {
+    background: #7B1FA2!important;
+}
 
 .create-new,
 input[type="submit" i] {
@@ -23,28 +23,33 @@ input[type="submit" i] {
     cursor: pointer;
     margin-right: 25px;
 }
-#search-option input, select{
-  border: none!important;
-  padding: 5px;
-  margin-top: 12px;
+
+#search-option input,
+select {
+    border: none!important;
+    padding: 5px;
+    margin-top: 12px;
 }
 
-#search-option select{
-  width: 100px;
-  height: 20px;
+#search-option select {
+    width: 100px;
+    height: 20px;
 }
- #search-option span{
-   font-size: 12px;
- }
+
+#search-option span {
+    font-size: 12px;
+}
+
 .create-new {
     text-decoration: none;
     font-size: 20px;
     line-height: 1.1;
     color: #2f2c2c!important;
 }
-.create-new:hover{
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-	background-color: #FFEB3B;
+
+.create-new:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: #FFEB3B;
 }
 
 input[type="submit" i]:hover {
@@ -100,30 +105,93 @@ input[type="submit" i]:hover {
 .search-box-dates #search-option:nth-child(2) {
     margin-left: 20px;
 }
-table{
-  width: 100%;
+
+table {
+    width: 100%;
+    font-size: 20px;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: -30px;
+}
+
+thead {
+    background-color: black;
+}
+
+thead tr {
+    height: 70px;
+    background-color: #7B1FA2!important;
+}
+
+thead tr a {
+    color: #fff!important;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+tr:nth-child(odd) {
+    padding: 20px;
+    background: #E1BEE7;
+}
+
+tr {
+    background-color: #fff;
+    height: 50px;
+}
+
+a.table-button,
+a.table-button-delete {
+    text-decoration: none;
+    padding: 8px;
+    background: #FFEB3B;
+}
+
+a.table-button-delete {
+    background-color: red;
+    color: white!important;
+}
+
+p.show {
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    padding: 20px;
+    color: #000;
+    background-color: #E1BEE7;
+}
+
+p.show:nth-child(odd) {
+    padding: 20px;
+    background: #fff;
+}
+
+div.links {
+    text-align: center;
+}
+
+.links a{
+  display: block;
+  margin-top: 25px;
   font-size: 20px;
-  border-collapse: collapse;
-  text-align: left;
-  margin-top: -30px;
-}
-thead{
-  background-color: black;
-}
-thead tr{
-  height: 70px;
-  background-color: #7B1FA2!important;
-}
-thead tr a{
-  color: #fff!important;
-  text-decoration: none;
-  font-weight: 100;
-}
-tr:nth-child(odd){
+  width: 50px;
+  margin-left: 20px;
+  border: none!important;
+  color: #2f2c2c!important;
+  background: #FFEB3B;
   padding: 20px;
-  background: #E1BEE7;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
+  text-decoration: none;
 }
-tr{
-  background-color: #fff;
-  height: 50px;
+.links a:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  background-color: #FFEB3B;
+}
+.main {
+    color: white;
+    width: 100%;
+    margin: 50px 50px 50px 25px;
+    padding: 0;
+    margin-right: 0;
 }

@@ -19,9 +19,6 @@ class MachinesController < ApplicationController
     @machine = Machine.new
   end
 
-  # GET /machines/1/edit
-  def edit
-  end
 
   # POST /machines
   # POST /machines.json

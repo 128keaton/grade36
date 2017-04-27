@@ -55,12 +55,11 @@
             <th><%= sort_link @q, :created_at, "Created" %></th>
             <th><%= sort_link @q, :order_number, "Order Number" %></th>
             <th><%= sort_link @q, :order_number, "Deleted" %></th>
-            <th colspan="3"></th>
+            <th colspan="2"><a class="sort_link">Actions</a></th>
         </tr>
     </thead>
 
     <tbody>
-
         <% @results.each do |machine| %>
         <tr>
             <td><%= machine.unit_serial_number %></td>
@@ -71,10 +70,10 @@
             <td><%= machine.hdd_size %></td>
             <td><%= machine.hdd_serial %></td>
             <td><%= machine.created_at %></td>
-            <td><%= machine.order_number %></td>
-            <td><% if machine.deleted %><%= machine.deleted %><% else %>false<% end %></td>
+            <td><% if machine.order_number == 0 %>No Order Number<% else %><%= machine.order_number %><% end %></td>
+            <td><% if machine.deleted || machine.deleted == true%>Yes<% else %>No<% end %></td>
             <td><%= link_to 'View', machine, :class => "table-button" %></td>
-            <td><%= link_to 'Delete', machine, method: :delete, data: { confirm: 'Are you sure?' }, :class => "table-button" %></td>
+            <td><%= link_to 'Mark Deleted', machine, method: :delete, data: { confirm: 'Are you sure?' }, :class => "table-button-delete" %></td>
         </tr>
         <% end %>
     </tbody>
